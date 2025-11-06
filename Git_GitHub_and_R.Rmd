@@ -34,7 +34,7 @@ head(Students_Clean)
 
 
 ### Question:
-Why might someone drop a column from a dataset?
+Why might someone drop a column like name or ID from a dataset?
 
 ### Answer:
 

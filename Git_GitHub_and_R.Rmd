@@ -1,6 +1,6 @@
 ---
-title: "Classwork Activity"
-author: "Enter Your Name"
+title: "Classwork Activity Js"
+author: " James Simpson"
 output: html_notebook
 ---
 
@@ -26,19 +26,31 @@ head(students)
 ## Step 2: Drop a column
 
 ```{r}
-# Remove the Name column
-
+Students_Clean <- students %>% select(-Name)
+Students_Clean
 ```
 
 
+
+
+
+
+
+
+
 ### Question:
+
+
+
 Why might someone drop a column like name or ID from a dataset?
 
-### Answer:
+### Answer 2:
+The column could be unnecessary to the dataset, the user could want to replace the column with something else requiring the removal of the column or lastly you can use it to help filter and clean data by removing unwanted columns.
 
 ## Step 3: Visualize
 ```{r}
 library(ggplot2)
+library(dplyr)
 ```
 
 ```{r}
@@ -58,20 +70,50 @@ ggplot(Students_Clean, aes(x = Major, y = Satisfaction, fill = Major)) +
 ### Questions:
 
 1. What pattern or difference do you see in the chart?
+
+#### Math has the highest student satisfaction with the smallest range.
+
 2. What might explain it?
+
+#### Because there is the least amount of math, the student might enjoy it because it occurs the least frequently.
+
 3. Do you think this chart is accurate?
+
+#### Yes.
+
 4. Why? Why not?
 
-## Step 5: Questions on Git, GitHub and R Markdown
+#### The chart has multiple values, meaning its more accurate due to the repeated trials.
+
+## Step 5: Questions on Git, GitHub, and R Markdown
 
 ### Questions:
 
 1. What does git add do?
+
+#### It adds new or changed files from your directory to the git working area.
+
 2. What is the difference between git commit and git push?
+
+#### Commit pushes a snapshot of your data while push copies the remote repository.
+
 3. Why is it useful to use GitHub for your code or data projects?
+
+#### It's good for collaborating with others on projects since you can easily share and edit code.
+
 4. How could version control help when collaborating?
+
+#### Its helpfull because the ability to easily revert chunks means team members can quickly undo mistakes and have backups in case of any catastrophic accidents.
+
 5. What is the difference between a code chunk and regular text in R Markdown?
+
+#### Code is used to program and edit our data to be used at will, text is used to explain any parts of the code, the data or any other factors of it.
+```{r}
+
+```
+
 6. How could R Markdown help you explain your analysis to someone else?
 
-### Answers:
+#### let you clean and visualize your data so they can understand through visual learning what your data is about.
+
 
